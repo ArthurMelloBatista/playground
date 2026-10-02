@@ -10,7 +10,7 @@ buttons = tk.Frame(root)
 buttons.pack(padx=16, pady=(0, 16))
 
 tk.Button(buttons, text="Close", command=root.destroy, activebackground="red").pack(side=tk.LEFT, padx=4)
-tk.Button(buttons, text="Keep running").pack(side=tk.LEFT, padx=4)
+tk.Button(buttons, text="Keep running", command=lambda: messagebox.showinfo("Still open", "The main window is still running.")).pack(side=tk.LEFT, padx=4)
 tk.Button(buttons, text="If you are curious, click me", command=lambda: messagebox.showinfo("Mensagem", "Stop clicking me!")).pack(side=tk.LEFT, padx=4)
 
 root.mainloop()
